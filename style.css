@@ -1,0 +1,39 @@
+body {
+    background-color:palegoldenrod;
+    padding: 0%;
+    margin: 0%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+.main {
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#pad {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 3px 8px;
+}
+
+.box {
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
