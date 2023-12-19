@@ -12,8 +12,11 @@ for (let index = 0; index < defaultSize*defaultSize; index++) {
     box.classList.add('box');
     box.style.width = (500 / defaultSize) + 'px';
     box.style.height = (500 / defaultSize) + 'px';
+    box.addEventListener('mouseover', changeColour);
     pad.appendChild(box);
 } 
+
+const boxes = document.querySelectorAll('.box');
 
 // resets back to default settings
 resetButton.addEventListener('click', () => {
@@ -21,7 +24,7 @@ resetButton.addEventListener('click', () => {
     slider.value = defaultSize;
     value.innerHTML = defaultSize + ' x ' + defaultSize;
     pad.innerHTML = '';
-    updateGrid(defaultSize);
+    updateGrid(defaultSize);   
 });
 
 // updates text containing grid size
@@ -42,6 +45,11 @@ function updateGrid(choice) {
         box.classList.add('box');
         box.style.width = (500 / choice) + 'px';
         box.style.height = (500 / choice) + 'px';
+        box.addEventListener('mouseover', changeColour);
         pad.appendChild(box);
     } 
+}
+
+function changeColour(e) {
+    e.target.style.backgroundColor = colourPicker.value;
 }
